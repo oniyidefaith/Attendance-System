@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="{% static 'styles/student_form_style.css' %}">
+</head>
+<body>      
+<!-- BASIC HEADER (Just descripes what the page is about) -->
+  <header>
+    <h2>Registration</h2>
+  </header>
+
+  <!-- NOTE FOR USERS -->
+  <h3 class="note">NOTE: Labels with red asterics(<span class="asteric">*</span>) are imporant.</h3>
+
+  <!-- NOW THE FORM..(Also responsive) -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="input">
+      <label for="MatricNo">
+        MatricNo<span class="asteric">(*)</span>
+      </label>
+      <input type="text" name="MatricNo" id="student_name" class="name" required>
+    </div>
+
+    <div class="input">
+      <label for="student_name">
+        Student Name<span class="asteric">(*)</span>
+      </label>
+      <input type="text" name="Student_name" id="student_name" class="name" required>
+    </div>
+
+    <div class="input">
+      <label for="gender">
+        Gender
+      </label>
+      <select name="Gender" required class="select" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="Level">
+      Level
+      </label>
+      <select name="Level" required class="select" id="semester">
+        <option value="ND1">ND1</option>
+        <option value="ND2">ND2</option>
+        <option value="HND1">HND1</option>
+        <option value="HND2">HND2</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="semester">
+      Semester
+      </label>
+      <select name="Semester" required class="select" id="semester">
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+      </select>
+    </div>
+  
+    <div class="input">
+      <label for="email">
+        Email<span class="asteric">(*)</span>
+      </label>
+      <input type="email" name="Email" id="email" required>
+    </div>
+
+    <div class="input">
+      <label for="session">
+        Session
+      </label>
+      <select name="Session" required class="select" id="session">
+        <option value="2019">2019/2020</option>
+        <option value="2020">2020/2021</option>
+        <option value="2021">2021/2022</option>
+        <option value="2022">2022/2023</option>
+        <option value="2023">2023/2024</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="department">
+        Department
+      </label>
+      <select name="Department" required class="select" id="program">
+        <option value="Computer-science">Computer science</option>
+      </select>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="submit">
+      <!-- SUBMIT AND BAck leads to student data -->
+      <button type="submit" id="submit">submit</button>
+      <a href="student_data">
+        <button  type="button" id="back">back</button>
+      </a>
+    </div>
+
+  </form>
+
+<!-- ***************** -->
+
+<!-- BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+  </footer>
+</body>
+</html>

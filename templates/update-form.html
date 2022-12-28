@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="{% static 'styles/student_form_style.css' %}">
+</head>
+<body>
+       
+<!-- BASIC HEADER (Just descripes what the page is about) -->
+  <header>
+    <h2>Update Student Record</h2>
+  </header>
+
+  <!-- NOTE FOR USERS -->
+  <h3 class="note">NOTE: Labels with red asterics(<span class="asteric">*</span>) are imporant.</h3>
+
+  <!-- NOW THE FORM..(Also responsive) -->
+  <form action="" method="POST">
+    {% csrf_token %}
+    <div class="input">
+      <label for="MatricNo">
+        MatricNo<span class="asteric">(*)</span>
+      </label>
+      <div>
+        {{form.matric_no}}
+      </div>
+    </div>
+
+    <div class="input">
+      <label for="student_name">
+        Student Name<span class="asteric">(*)</span>
+      </label>
+      <div>
+        {{form.name}}
+      </div>
+    </div>
+
+    <div class="input">
+      <label for="gender">
+        Gender<span class="asteric">(*)</span>
+      </label>
+      <div>
+        {{form.gender}}
+      </div>
+    </div>
+
+    <div class="input">
+      <label for="Level">
+      Level
+      </label>
+      <div>
+        {{form.level}}
+      </div>
+    </div>
+
+    <div class="input">
+      <label for="semester">
+      Semester
+      </label>
+      <div>
+        {{form.semester}}
+      </div>
+    </div>
+  
+    <div class="input">
+      <label for="email">
+        Email
+      </label>
+      <div>
+        {{form.email}}
+      </div>
+    </div>
+
+    <div class="input">
+      <label for="session">
+        Session
+      </label>
+      <div>
+        {{form.session}}
+      </div>
+    
+    </div>
+
+    <div class="input">
+      <label for="department">
+        Department
+      </label>
+      <select {{form.department}} name="Department" required class="select" id="program">
+        <option value="Computer-science">Computer science</option>
+      </select>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="submit">
+      <!-- SUBMIT AND BAck leads to student data -->
+      <button type="submit" id="submit">submit</button>
+      <a href="student_data">
+        <button  type="button" id="back">back</button>
+      </a>
+    </div>
+
+  </form>
+
+<!-- ***************** -->
+
+<!-- BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+  </footer>
+</body>
+</html>

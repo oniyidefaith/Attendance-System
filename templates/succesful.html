@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="{% static 'styles/succesful.css' %}">
+</head>
+
+<body>
+
+  <!-- THE RESPONSIVE NAV BAR..LOL...AND WITHOUT JS -->
+  <header>
+    <h3 class="logo">LOGO</h3>
+    <section class="nav-sec">
+      <ul>
+        <li><a href="about.html">About</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href="sign_up.html"><button class="sign-up-btn">Sign Up</button>
+      </a>
+    </section>
+  </header>
+
+  <main>
+    <img id="mock_up" src="images/award.png" alt="">
+    <h3>SUCCESFUL</h3>
+    
+    <a href="{% url 'attendance-table' %}"><button id="logInBtn">Go To Attendance</button></a>
+  </main>
+
+  <!--BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-color:#ffc300;
+}
+
+nav{
+  display: flex;
+  padding: 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.logo{
+  font-size: 1.75rem;
+  letter-spacing: 0.2em; 
+}
+.nav-sec{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.nav-sec ul{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.nav-sec ul li{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line{
+  padding: 0.045em;
+  background-color: white;
+  width: 0px;
+  transition-property: all;
+  transition-duration: 0.7s;
+
+}
+
+.nav-sec ul li:hover > .line{
+  background-color: orangered;
+  width: 80%;
+}
+
+.active>.line{
+  background-color: orangered;
+  width: 80%;
+}
+
+.nav-sec a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  letter-spacing: 0.05em;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.log-in-btn{
+  border: none;
+  padding: 0.6rem;
+  width: 7rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: orangered;
+  color: white;
+}
+
+.log-in-btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+    }
+
+input[type="checkbox"]{
+  display: none;
+    }
+
+@media (max-width:900px) {
+
+nav{
+ position: fixed;
+ background-color: white;
+ top: 0;
+ z-index: 1;
+ width: 100vw;
+}
+nav .menu-btn i{
+ display: block;
+}
+ #click:checked ~ .menu-btn i:before{
+ content: "\f00d";
+      }
+nav .nav-sec{
+        position: fixed;
+        top:-110%;
+        z-index: -1;
+        background-color: orangered;
+        height: auto;
+        width: 100vw;
+        text-align: center;
+        display: block;
+        transition: all 0.5s ease;
+      }
+      #click:checked ~ .nav-sec{
+        top: 3.2em;
+      }
+      .nav-sec ul{
+        display: block;
+        margin: 0 auto;
+      }
+      nav .nav-sec ul li{
+        width: 100%;
+        margin: 20px 0;
+      }
+      .line{
+        display: none;
+      }
+       a{
+        transition-property: all;
+        transition-duration: 0.3s;
+        font-weight: 800;
+        font-size: 1rem;
+      }
+      .active a{
+        color: #fff;
+      }
+      #click:checked ~ ul li a{
+        margin-left: 0px;
+      }
+      nav ul li a.active,
+      nav ul li a:hover{
+        background: none;
+        color: white;
+        padding: 0;
+      }
+      nav .menu-btn i{
+        color: orangered;
+        font-size: 22px;
+        cursor: pointer;
+        display: contents;
+    }
+    .log-in-btn{
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      background-color: rgb(249, 136, 95);
+      margin-bottom: 2rem;
+    }
+}
+
+header{
+  width: 70%;
+  background-color: #fff;
+  border: 2px solid #181938;
+  color: #181938;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem auto ;
+  padding: 0.5em;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+header img{
+  width: 4em;
+}
+
+main{
+  width: 71%;
+  margin: 0 auto;
+  height: 85vh;
+}
+
+.overall{
+  width: 110px;
+  background-color: #2841f9;
+  color: white;
+  font-weight: 700;
+  padding: 0.4em 0.5em;
+  border: 2px solid #1ed6b3;
+  box-shadow: 3px 3px 0 #00afd1, 6px 6px 0 #04082d;
+  transition-property: all;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  text-transform: uppercase; 
+  font-size: 0.8em;
+  justify-content: center;
+}
+.overall:hover{
+  box-shadow: none;
+  background-color: #04082d;
+}
+.overall:active{
+  box-shadow: 3px 3px 0 #04082d;
+  background-color: #00afd1;
+}
+
+.table{
+  display: grid;
+  grid-template-columns: repeat(08,200px);
+  grid-auto-rows: 30px;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 0.8em;
+  margin-bottom: 4rem;
+
+}
+
+.table div{
+  border: 1px solid #04082d;
+}
+
+.th{
+  background-color: #00afd1;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.4em;
+}
+
+.td{
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.action{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.update{
+  border: none;
+  padding: 0.5em;
+  width: 6em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: orangered;
+  color: white;
+  font-size: 0.8em;
+}
+
+.delete{
+  border: none;
+  padding: 0.5em;
+  width: 6em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #181938;
+  color: white;
+  font-size: 0.8em;
+}
+
+.insert_link{
+  text-decoration: none;
+}
+
+/* styles for status (promoted or dropped) */
+
+.promoted{
+  color: green;
+}
+
+.dropped{
+  color: red;
+}
+
+/* **************************************** */
+
+@media (max-width: 900px){
+
+  header{
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+  main{
+    width: 95%;
+  }
+  .table{
+    grid-template-columns: repeat(08, 150px);
+    overflow-x: scroll;
+  }
+  .overall{
+    width: 100px;
+    gap: 0.1em;
+  }
+}
+@media (max-width: 550px){
+
+  header{
+    margin-top: 7em;
+    text-align: center;
+    font-size: 0.7rem;
+  }
+}
+
+footer{
+  background-color: #181938;
+  color: #ffc300;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  text-align: center;
+  padding-bottom: 2em;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-size: 0.7em;
+}

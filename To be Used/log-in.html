@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="styles/log-in.css">
+</head>
+<body>
+
+  <!-- THE RESPONSIVE NAV BAR..LOL...AND WITHOUT JS -->
+  <header>
+    <h3 class="logo">LOGO</h3>
+    <section class="nav-sec">
+      <ul>
+        <li><a href="index.html">Home</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="about.html">About</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href="sign_up.html"><button class="log-in-btn">Sign Up</button>
+      </a>
+    </section>
+  </header>
+
+  <main>
+    <img id="mock_up" src="images/marker mock-up.png" alt="">
+    <div  class="log_in">
+      <!-- Log in input -->
+      <h3>Log In</h3>
+      <input type="text" id="username" placeholder="User Name">
+      <input type="password" placeholder="Password" name="" id="password">
+      <a href="home.html" ><button id="logInBtn">Login</button></a>
+      <div class="check">
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <span></span>
+          Remember Me
+        </label>
+        <!-- Error message -->
+        <p class="error"></p>
+      </div>
+    </div>
+  </main>
+
+  <!--BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+    <p>||</p>
+    <p>Developed By SAHAR HASSAN(AFGHAN)</p>
+  </footer>
+
+  <script src="validation.js"></script>
+</body>
+</html>

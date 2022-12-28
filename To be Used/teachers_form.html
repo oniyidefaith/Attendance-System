@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers</title>
+  <link rel="stylesheet" href="styles/student_form_style.css">
+</head>
+
+<body>
+  <!-- THE RESPONSIVE NAV BAR..LOL...AND WITHOUT JS -->
+  <nav>
+    <h3 class="logo">LOGO</h3>
+
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <section class="nav-sec">
+      <ul>
+        <li><a href="home.html">Home</a>
+          <div class="line"></div>
+        </li>
+        <li class="active"><a href="student_data.html">Student</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="teachers_data.html">teachers</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="subject_data.html">subject</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="monthly_report.html">monthly report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="overall_report.html">overall report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="attedance.html">do attedance</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href="log-in.html"><button class="log-in-btn">log in</button>
+      </a>
+    </section>
+  </nav>
+  <!-- ***************** -->
+
+  <!-- BASIC HEADER (Just descripes what the page is about) -->
+  <header>
+    <h2>Update Teachers Records</h2>
+  </header>
+
+  <!-- NOTE FOR USERS -->
+  <h3 class="note">NOTE: Labels with red asterics(<span class="asteric">*</span>) are imporant.</h3>
+
+  <!-- NOW THE FORM..(Also responsive) -->
+  <form action="#">
+    <div class="input">
+      <label for="first_name">
+        First Name<span class="asteric">(*)</span>
+      </label>
+      <input type="text" name="first_name" id="first_name" class="name" required>
+    </div>
+
+      <div class="input">
+        <label for="last_name">
+          Last Name
+        </label>
+        <input type="text" name="last_name" id="last_name" class="name" required>
+      </div>
+
+    <div class="input">
+      <label for="gender">
+        Gender<span class="asteric">(*)</span>
+      </label>
+      <select name="" required class="select"  id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="phone_number">
+        Phone Number
+      </label>
+      <input type="tel" name="phone_number" id="phone_number" class="number" required>
+    </div>
+
+
+    <div class="input">
+      <label for="d-o-b">
+        Date Of Birth
+      </label>
+      <input type="date" name="d-o-b" id="d-o-b" required>
+    </div>
+
+    <div class="input">
+      <label for="email">
+        Email
+      </label>
+      <input type="email" name="email" id="email" required>
+    </div>
+
+    <div class="input">
+      <label for="address">
+        Address
+      </label>
+      <textarea name="address" id="address"></textarea>
+    </div>
+
+      <div class="input">
+        <label for="salary">
+          Salary
+        </label>
+        <input type="tel" name="salary" id="salary" class="number">
+      </div>
+
+    <div class="input">
+      <label for="program">
+        Degree<span class="asteric">(*)</span>
+      </label>
+      <select name="" required class="select"  id="program">
+        <option value="BSC">Bachelor of Science</option>
+        <option value="ND">National Diploma</option>
+      </select>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="submit">
+      <!-- SUBMIT AND BAck leads to teachers data -->
+      <button type="submit" id="submit">submit</button>
+      <a href="teachers_data.html">
+        <button type="button" id="back">back</button>
+      </a>
+    </div>
+
+  </form>
+
+  <!-- ***************** -->
+
+  <!-- BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <link rel="stylesheet" href="styles/student_form_style.css">
+</head>
+
+<body>
+  <!-- THE RESPONSIVE NAV BAR..LOL...AND WITHOUT JS -->
+  <nav>
+    <h3 class="logo">LOGO</h3>
+
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <section class="nav-sec">
+      <ul>
+        <li><a href="home.html">Home</a>
+          <div class="line"></div>
+        </li>
+        <li ><a href="student_data.html">Student</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="teachers_data.html">teachers</a>
+          <div class="line"></div>
+        </li>
+        <li class="active"><a href="subject_data.html">subject</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="monthly_report.html">monthly report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="overall_report.html">overall report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="attedance.html">do attedance</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href="log-in.html"><button class="log-in-btn">log in</button>
+      </a>
+    </section>
+  </nav>
+  <!-- ***************** -->
+
+  <!-- BASIC HEADER (Just descripes what the page is about) -->
+  <header>
+    <h2>SUBJECT'S ENTRY</h2>
+  </header>
+
+  <!-- NOTE FOR USERS -->
+  <h3 class="note">NOTE: Labels with red asterics(<span class="asteric">*</span>) are imporant.</h3>
+
+  <!-- NOW THE FORM..(Also responsive) -->
+  <form action="#">
+   
+    <div class="input">
+      <label for="subject_name" >
+       Subject Name
+      </label>
+      <select name="" required class="select" id="subject_name">
+        <option value="" disabled selected hidden>Select Subject</option>
+        <option value="C#">C#</option>
+        <option value="js">JAVASCRIPT</option>
+        <option value="oop">OBJECT ORIENTED PROGRAMMING</option>
+        <option value="cloud_comp">CLOUD COMPUTING</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="semester">
+        Semester
+      </label>
+      <select name="" required class="select" id="semester">
+        <option value="" disabled selected hidden>Select Semester</option>
+        <option value="first">First</option>
+        <option value="second">Second</option>
+        <option value="third">Third</option>
+        <option value="fourth">Fourth</option>
+        <option value="fifth">fifth</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="session">
+        Teacher
+      </label>
+      <select name="" required class="select" id="session">
+        <option value="" disabled selected hidden>Select Teacher</option>
+        <option value="2019">2019/2020</option>
+        <option value="2020">2020/2021</option>
+        <option value="2021">2021/2022</option>
+        <option value="2022">2022/2023</option>
+        <option value="2023">2023/2024</option>
+      </select>
+    </div>
+
+    <div class="input">
+      <label for="program">
+        Field
+      </label>
+      <select name="" required  class="select" id="program">
+        <option value="" disabled selected hidden>Select Field</option>
+        <option value="BSCS">BSCS</option>
+        <option value="MCS">MCS</option>
+        <option value="HND">HND</option>
+      </select>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="submit">
+      <!-- SUBMIT AND BAck leads to student data -->
+      <button type="submit" id="submit">submit</button>
+      <a href="subject_data.html">
+        <button type="button" id="back">back</button>
+      </a>
+    </div>
+
+  </form>
+
+  <!-- ***************** -->
+
+  <!-- BASIC FOOTER -->
+  <footer>
+    <p>Copyright &copy2022</p>
+    <p>||</p>
+    <P>Frontend designed by J_codes</P>
+  </footer>
+</body>
+
+</html>

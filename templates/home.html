@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <!-- THE RESPONSIVE NAV BAR..LOL...AND WITHOUT JS -->
+  <nav>
+    <h3 class="logo">LOGO</h3>
+
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <section class="nav-sec">
+      <ul>
+        <li class="active"><a href="{% url 'home' %}">Home</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="{% url 'student-data' %}">Student</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="">monthly report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="{% url 'overall-report' %}">overall report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="{% url 'do-attendance' %}">do attedance</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href=""><button class="log-in-btn">log out</button>
+      </a>
+    </section>
+  </nav>
+
+  <!-- BASIC INTRO (wanted to add more but ran out of ideas) -->
+  <main>
+    <h1>WELCOME TO SAVING THE TIME</h1>
+    <h2>Developed & Designed By JIDE_CODES </h2>
+   
+  </main>
+
+  <!-- no footer for this page. -->
+</body>
+
+</html>

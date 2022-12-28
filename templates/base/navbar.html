@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'styles/style.css' %}">
+<nav>
+    <h3 class="logo">LOGO</h3>
+
+    <input type="checkbox" id="click">
+    <label for="click" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </label>
+
+    <section class="nav-sec">
+      <ul>
+        <li class="active"><a href="#">Home</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="{% url 'student-data' %}">Student</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="">monthly report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="">overall report</a>
+          <div class="line"></div>
+        </li>
+        <li><a href="">do attedance</a>
+          <div class="line"></div>
+        </li>
+      </ul>
+      <a href=""><button class="log-in-btn">log out</button>
+      </a>
+    </section>
+  </nav>
+
+  {% block content %}
+  
+  {% endblock content %}
+
